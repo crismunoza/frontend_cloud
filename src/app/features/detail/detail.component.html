@@ -1,0 +1,160 @@
+<div class="detail-container">
+    <div class="card detail-card">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4"><i class="fas fa-file-medical mr-2"></i> Detalles del Paciente</h3>
+            <div class="d-flex justify-content-end mb-3">
+                <button (click)="toggleEditMode()" class="btn btn-info btn-sm">
+                    <i class="fas fa-edit mr-2"></i> {{ editMode ? 'Cancelar' : 'Editar' }}
+                </button>
+            </div>
+            <form *ngIf="editMode" (ngSubmit)="updatePaciente()" #detailForm="ngForm">
+                <div class="form-group mb-3">
+                    <label>Nombre</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        [(ngModel)]="paciente.nombre" 
+                        name="nombre" 
+                        required 
+                        #nombre="ngModel">
+                    <div *ngIf="nombre.invalid && nombre.touched" class="text-danger">
+                        El nombre es obligatorio.
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Apellido</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        [(ngModel)]="paciente.apellido" 
+                        name="apellido" 
+                        required 
+                        #apellido="ngModel">
+                    <div *ngIf="apellido.invalid && apellido.touched" class="text-danger">
+                        El apellido es obligatorio.
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Edad</label>
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        [(ngModel)]="paciente.edad" 
+                        name="edad" 
+                        min="0" 
+                        max="120"
+                        #edad="ngModel">
+                    <div *ngIf="edad.invalid && edad.touched" class="text-danger">
+                        La edad debe ser un número válido entre 0 y 120.
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Dirección</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        [(ngModel)]="paciente.direccion" 
+                        name="direccion" 
+                        #direccion="ngModel">
+                    <!-- Dirección no es requerida -->
+                </div>
+                <div class="form-group mb-3">
+                    <label>RUT</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        [(ngModel)]="paciente.rut" 
+                        name="rut" 
+                        required 
+                        pattern="^\d{1,2}\.\d{3}\.\d{3}-[\dkK]$"
+                        #rut="ngModel">
+                    <div *ngIf="rut.invalid && rut.touched" class="text-danger">
+                        El RUT es obligatorio y debe tener el formato XX.XXX.XXX-X.
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Fecha de Nacimiento</label>
+                    <input 
+                        type="date" 
+                        class="form-control" 
+                        [(ngModel)]="paciente.fechaNacimiento" 
+                        name="fechaNacimiento" 
+                        required 
+                        #fechaNacimiento="ngModel">
+                    <div *ngIf="fechaNacimiento.invalid && fechaNacimiento.touched" class="text-danger">
+                        La fecha de nacimiento es obligatoria.
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Descripción de Ingreso</label>
+                    <textarea 
+                        class="form-control" 
+                        rows="3" 
+                        [(ngModel)]="paciente.descripcionIngreso" 
+                        name="descripcionIngreso" 
+                        #descripcionIngreso="ngModel"></textarea>
+                    <!-- Descripción de ingreso no es requerida -->
+                </div>
+                <div class="form-group mb-3">
+                    <label>Fecha de Ingreso</label>
+                    <input 
+                        type="date" 
+                        class="form-control" 
+                        [(ngModel)]="paciente.fechaIngreso" 
+                        name="fechaIngreso" 
+                        readonly>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Fecha de Egreso</label>
+                    <input 
+                        type="date" 
+                        class="form-control" 
+                        [(ngModel)]="paciente.fechaEgreso" 
+                        name="fechaEgreso" 
+                        #fechaEgreso="ngModel">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-sm" [disabled]="detailForm.invalid"><i class="fas fa-save mr-2"></i> Guardar</button>
+                </div>
+            </form>
+            <div *ngIf="!editMode">
+                <div class="form-group mb-3">
+                    <label>Nombre</label>
+                    <p class="form-control-static">{{ paciente.nombre }}</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Apellido</label>
+                    <p class="form-control-static">{{ paciente.apellido }}</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Edad</label>
+                    <p class="form-control-static">{{ paciente.edad }}</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Dirección</label>
+                    <p class="form-control-static">{{ paciente.direccion }}</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>RUT</label>
+                    <p class="form-control-static">{{ paciente.rut }}</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Fecha de Nacimiento</label>
+                    <p class="form-control-static">{{ paciente.fechaNacimiento }}</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Descripción de Ingreso</label>
+                    <p class="form-control-static">{{ paciente.descripcionIngreso }}</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Fecha de Ingreso</label>
+                    <p class="form-control-static">{{ paciente.fechaIngreso }}</p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Fecha de Egreso</label>
+                    <p class="form-control-static">{{ paciente.fechaEgreso }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

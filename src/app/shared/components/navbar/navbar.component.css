@@ -1,0 +1,53 @@
+/* ...existing code... */
+
+.navbar {
+    background: linear-gradient(90deg, #00796b, #004d40);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, #004d40, #00796b);
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffeb3b !important;
+}
+
+.dropdown-menu {
+    background: #004d40;
+}
+
+.dropdown-item {
+    color: #ffffff !important;
+    transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+    background: #00796b;
+}
+
+/* Agregar iconos de Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Asegurar que los iconos tengan el margen correcto */
+.navbar-brand i,
+.nav-link i,
+.dropdown-item i {
+    margin-right: 8px;
+    color: #ffffff;
+}
+
+/* ...existing code... */

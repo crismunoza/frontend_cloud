@@ -1,0 +1,33 @@
+<div class="record-container">
+    <div class="table-responsive mt-5">
+        <table class="table table-striped table-bordered table-medical">
+            <thead class="table-dark">
+                <tr>
+                    <th><i class="fas fa-user mr-2"></i> Nombre</th>
+                    <th><i class="fas fa-id-card mr-2"></i> Apellido</th>
+                    <th><i class="fas fa-id-badge mr-2"></i> RUT</th> <!-- Nueva columna con icono -->
+                    <th><i class="fas fa-heartbeat mr-2"></i> Crítico</th>
+                    <th><i class="fas fa-tools mr-2"></i> Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let paciente of pacientes; let i = index">
+                    <td>{{ paciente.nombre }}</td>
+                    <td>{{ paciente.apellido }}</td>
+                    <td>{{ paciente.rut }}</td> <!-- Celda para RUT agregada -->
+                    <td>
+                        <span class="badge" [ngClass]="paciente.critico ? 'critical' : 'non-critical'">{{ paciente.critico ? 'Crítico' : 'No Crítico' }}</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-warning btn-sm me-1" (click)="editarPaciente(paciente.id)" title="Editar">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" (click)="deletePaciente(paciente.id)" title="Eliminar">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

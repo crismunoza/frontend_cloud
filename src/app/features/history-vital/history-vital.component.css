@@ -1,0 +1,61 @@
+/* Estilos de la tabla */
+.record-container {
+    padding: 20px;
+}
+
+.table-medical {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table-medical thead {
+    background-color: #00796b; /* Verde existente */
+    color: #ffffff;
+}
+
+.table-medical tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.badge-success {
+    background-color: #28a745; /* Verde para no crítico */
+}
+
+.badge-danger {
+    background-color: #dc3545; /* Rojo para crítico */
+}
+
+/* Cambiar color de texto de negro a verde donde sea necesario */
+.table-medical tbody td {
+    color: #004d40; /* Verde oscuro */
+}
+
+/* Espaciado entre columnas */
+.table-medical th, .table-medical td {
+    text-align: center;
+}
+
+/* Estilos para iconos en las columnas */
+.table-medical i {
+    font-size: 18px;
+}
+
+/* Estilos para la tabla responsiva */
+.table-responsive {
+    margin-top: 20px;
+}
+
+/* Estilos adicionales para mejor legibilidad */
+.table-medical th {
+    font-weight: bold;
+}
+
+.table-medical td {
+    vertical-align: middle;
+}
+
+/* Espaciado adicional para evitar que la tabla esté pegada al navbar */
+body {
+    padding-top: 80px; /* Ajustar según la altura de la navbar */
+}

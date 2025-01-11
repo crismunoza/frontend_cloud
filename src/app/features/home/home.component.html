@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <div class="d-flex">
+        <main class="main-content">
+            <div class="row">
+                <div class="col-md-4" *ngFor="let pac of pacientes">
+                    <div class="card mb-4 card-animated">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-user-injured mr-2"></i> {{ pac.nombre }} {{ pac.apellido }}</h5>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="card-text"><strong>Edad:</strong> {{ pac.edad }}</p>
+                                    <p class="card-text"><strong>RUT:</strong> {{ pac.rut }}</p>
+                                    <p class="card-text"><strong>Fecha de Nacimiento:</strong> {{ pac.fechaNacimiento | date }}</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text"><strong>Estado:</strong>
+                                        <span class="badge" [ngClass]="pac.critico ? 'critical' : 'non-critical'">{{ pac.critico ? 'Crítico' : 'No Crítico' }}</span>
+                                    </p>
+                                </div>
+                            </div>  
+                            <div class="mt-3">
+                                <a [routerLink]="['/detail', pac.id || 'default']" class="btn btn-primary btn-animated me-2"><i class="fas fa-info-circle mr-2"></i> Detalles</a>
+                                <a [routerLink]="['/signs', pac.id || 'default']" class="btn btn-secondary btn-animated me-2"><i class="fas fa-heartbeat mr-2"></i> Ingresar S/Vitales</a>
+                                <a [routerLink]="['/history', pac.id || 'default']" class="btn btn-terciary btn-animated me-2"><i class="fas fa-heartbeat mr-2"></i> Ver S/Vitales</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

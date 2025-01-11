@@ -1,0 +1,122 @@
+/* ...existing code... */
+
+.detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+}
+
+.detail-card {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #00796b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #004d40;
+}
+
+.form-control {
+    border-radius: 50px;
+    padding: 10px 20px;
+    border-color: #b2dfdb;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #00796b;
+    box-shadow: none;
+}
+
+.btn-warning {
+    background: linear-gradient(45deg, #ffc107, #e0a800);
+    border: none;
+    border-radius: 50px;
+    padding: 8px 16px; /* Reducido de 10px 20px */
+    font-weight: bold;
+    font-size: 14px; /* Añadido para reducir el tamaño del texto */
+    transition: background 0.3s, transform 0.3s;
+    color: #ffffff;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(45deg, #e0a800, #ffc107);
+    transform: scale(1.03); /* Ligera reducción en el escalado */
+}
+
+.btn-animated {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-animated:hover {
+    transform: scale(1.05);
+}
+
+.btn-info {
+    background: linear-gradient(45deg, #17a2b8, #138496);
+    border: none;
+    border-radius: 50px;
+    padding: 6px 12px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-info:hover {
+    background: linear-gradient(45deg, #138496, #17a2b8);
+    transform: scale(1.03);
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #28a745, #218838);
+    border: none;
+    border-radius: 50px;
+    padding: 6px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-success:hover {
+    background: linear-gradient(45deg, #218838, #28a745);
+    transform: scale(1.05);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 50px;
+}
+
+/* Agregar iconos de Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Responsive */
+@media (max-width: 768px) {
+    .detail-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .detail-card {
+        padding: 15px;
+    }
+}

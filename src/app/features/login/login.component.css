@@ -1,0 +1,185 @@
+/* ...existing code... */
+
+.body-sign {
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.center-sign {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.panel {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.card-sign {
+    background: #ffffff;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card-sign:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-title-sign {
+    color: #00796b;
+}
+
+.input-group-text {
+    background-color: #e9ecef;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00796b, #004d40);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-facebook:hover {
+    background-color: #2d4373;
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #26c6da, #00acc1);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #00acc1;
+}
+
+.btn-animated {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-animated:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    color: #00796b;
+}
+
+.line-thru {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00796b;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.line-thru::before,
+.line-thru::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #00796b;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .card-sign {
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .d-flex a {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .body-sign {
+        padding: 30px 0;
+    }
+
+    .card-sign {
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .btn-facebook, .btn-secondary {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .line-thru {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-sign {
+        padding: 20px;
+    }
+}
+
+.form-control {
+    border-radius: 50px;
+    padding: 15px 20px;
+    border-color: #b2dfdb;
+}
+
+.form-control:focus {
+    border-color: #00796b;
+    box-shadow: none;
+}
+
+/* Agregar iconos de Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* ...existing code... */

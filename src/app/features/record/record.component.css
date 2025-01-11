@@ -1,0 +1,89 @@
+/* ...existing code... */
+
+.record-container {
+    padding: 20px;
+}
+
+.table-medical {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table-medical thead {
+    background-color: #00796b; /* Verde existente */
+    color: #ffffff;
+}
+
+.table-medical tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.badge-success {
+    background-color: #28a745; /* Verde para no crítico */
+}
+
+.badge.critical {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.badge.non-critical {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+/* Cambiar color de texto de negro a verde donde sea necesario */
+.table-medical tbody td {
+    color: #004d40; /* Verde oscuro */
+}
+
+/* Estilos para los botones de acción */
+.btn-info {
+    background-color: #17a2b8;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Espaciado adicional para evitar que la tabla esté pegada al navbar */
+body {
+    padding-top: 80px; /* Ajustar según la altura de la navbar */
+}
+
+/* Espaciado entre botones de acción */
+.btn + .btn {
+    margin-left: 5px;
+}

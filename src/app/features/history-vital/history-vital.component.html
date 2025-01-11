@@ -1,0 +1,25 @@
+<div class="record-container">
+    <div class="table-responsive mt-5">
+      <table class="table table-striped table-bordered table-medical">
+        <thead class="table-dark">
+          <tr>
+            <th><i class="fas fa-calendar-day mr-2"></i> Fecha Registro</th>
+            <th><i class="fas fa-thermometer-half mr-2"></i> Temperatura</th>
+            <th><i class="fas fa-heartbeat mr-2"></i> Frecuencia Cardiaca</th>
+            <th><i class="fas fa-tachometer-alt mr-2"></i> Presión Arterial</th>
+            <th><i class="fas fa-lungs mr-2"></i> Saturación Oxígeno</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let signo of signosVitales">
+            <td>{{ signo.fechaRegistro | date:'dd/MM/yyyy' }}</td>
+            <td>{{ signo.temperatura }}</td>
+            <td>{{ signo.frecuenciaCardiaca }}</td>
+            <td>{{ signo.presionArterial }}</td>
+            <td>{{ signo.saturacionOxigeno }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

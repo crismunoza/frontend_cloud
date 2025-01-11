@@ -1,0 +1,147 @@
+/* ...existing code... */
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f4f8; /* Color de fondo completo */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.sidebar ul {
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+    color: #004d40;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f4f8; /* Asegura que el fondo del contenido principal sea consistente */
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #00796b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00796b, #004d40);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #004d40, #00796b);
+    transform: scale(1.05);
+}
+
+/* Estilo para el botón "Signos Vitales" */
+.btn-secondary {
+    background: linear-gradient(45deg, #26c6da, #00acc1);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(45deg, #00acc1, #26c6da);
+    transform: scale(1.05);
+}
+
+.btn-terciary {
+    background: linear-gradient(45deg, #8d7b7b, #f51414);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    color: #ffffff;
+}
+
+.btn-terciary:hover {
+    background: linear-gradient(45deg, #f51414, #8d7b7b);
+    transform: scale(1.05);
+}
+.badge.critical {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.badge.non-critical {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+/* Agregar iconos de Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Estilos para la distribución de detalles en la tarjeta */
+.card-body .row {
+    margin-top: 15px;
+}
+
+.card-body .card-text {
+    margin-bottom: 10px;
+}
+
+.card-body .badge {
+    margin-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+}

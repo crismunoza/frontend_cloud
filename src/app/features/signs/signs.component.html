@@ -1,0 +1,32 @@
+<div class="signs-container">
+    <div class="card signs-card">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4"><i class="fas fa-heartbeat mr-2"></i> Ingresar Signos Vitales</h3>
+            <form (ngSubmit)="onSubmit()" #signsForm="ngForm">
+                <div class="form-group mb-3">
+                    <label for="temperatura">Temperatura</label>
+                    <input type="number" step="0.01" id="temperatura" name="temperatura" class="form-control" required [(ngModel)]="vitalSigns.temperatura" placeholder="Temperatura">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="frecuenciaCardiaca">Frecuencia Cardiaca</label>
+                    <input type="number" id="frecuenciaCardiaca" name="frecuenciaCardiaca" class="form-control" required [(ngModel)]="vitalSigns.frecuenciaCardiaca" placeholder="Frecuencia Cardiaca">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="presionArterial">Presión Arterial</label>
+                    <input type="text" id="presionArterial" name="presionArterial" class="form-control" required [(ngModel)]="vitalSigns.presionArterial" placeholder="Presión Arterial">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="saturacionOxigeno">Saturación de Oxígeno</label>
+                    <input type="number" id="saturacionOxigeno" name="saturacionOxigeno" class="form-control" required [(ngModel)]="vitalSigns.saturacionOxigeno" placeholder="Saturación de Oxígeno">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="fechaRegistro">Fecha de Registro</label>
+                    <input type="date" id="fechaRegistro" name="fechaRegistro" class="form-control" [(ngModel)]="vitalSigns.fechaRegistro" [value]="" readonly>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success">Guardar Signos Vitales</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

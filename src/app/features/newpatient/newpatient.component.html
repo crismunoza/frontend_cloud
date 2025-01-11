@@ -1,0 +1,55 @@
+<div class="newpatient-container">
+    <div class="card newpatient-card">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4"><i class="fas fa-user-plus mr-2"></i> Ingresar Nuevo Paciente</h3>
+            <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
+                <div class="form-group mb-3">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required [(ngModel)]="paciente.nombre" placeholder="Nombre">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" class="form-control" required [(ngModel)]="paciente.apellido" placeholder="Apellido">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad" name="edad" class="form-control" [(ngModel)]="paciente.edad" placeholder="Edad">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" class="form-control" [(ngModel)]="paciente.direccion" placeholder="Dirección">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="rut">RUT</label>
+                    <input type="text" id="rut" name="rut" class="form-control" required [(ngModel)]="paciente.rut" placeholder="RUT">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="critico">Crítico</label>
+                    <select id="critico" name="critico" class="form-control" [(ngModel)]="paciente.critico">
+                        <option value="false">No</option>
+                        <option value="true">Sí</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control" [(ngModel)]="paciente.fechaNacimiento">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="descripcionIngreso">Descripción de Ingreso</label>
+                    <textarea id="descripcionIngreso" name="descripcionIngreso" class="form-control" rows="3" [(ngModel)]="paciente.descripcionIngreso" placeholder="Descripción de Ingreso"></textarea>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="fechaIngreso">Fecha de Ingreso</label>
+                    <input type="date" id="fechaIngreso" name="fechaIngreso" class="form-control" [(ngModel)]="paciente.fechaIngreso">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="fechaEgreso">Fecha de Egreso</label>
+                    <input type="date" id="fechaEgreso" name="fechaEgreso" class="form-control" [(ngModel)]="paciente.fechaEgreso">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success">Guardar Paciente</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
