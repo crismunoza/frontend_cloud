@@ -21,7 +21,7 @@ export function MSALFactory(): IPublicClientApplication {
     auth: {
       clientId: '0b19cd10-99f8-4030-9012-a8833beabacb',
       authority: 'https://login.microsoftonline.com/41d2db76-00a5-48bf-903a-d32d431ee022',
-      redirectUri: 'http://localhost:4200'
+      redirectUri: 'https://44.193.178.223/callback'
     }
   });
 }
