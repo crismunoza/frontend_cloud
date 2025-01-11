@@ -2,6 +2,9 @@
 FROM node:20-alpine AS buildstage
 WORKDIR /app
 
+# Instalar dependencias necesarias para criptografía
+RUN apk add --no-cache libressl-dev
+
 # Copiar los archivos necesarios
 COPY package*.json ./
 
